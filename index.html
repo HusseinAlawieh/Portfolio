@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Hussein Alawieh Portfolio</title>
+</head>
+<body>
+
+    <!-- Navigator starts here. -->
+    <nav class="nav">
+        <div class="max__width">
+            <div class="logo"><a href="#">Hussein<span>Alawieh</span></a></div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Using fontawesome icon here. -->
+            <div class="menu-btn"> 
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+     <!-- Home section start here. -->
+     <section class="home" id="home">
+        <div class="max__width">
+            <div class="home__content">
+                <div class="text-1">Hello, My name is</div>
+                <div class="text-2">Hussein Alawieh</div>
+                <div class="text-3">and <span class="typing__1"></span></div>
+                <a href="https://www.linkedin.com/in/HUSSEIN-ALAWIEH">My Linked<i class="fab fa-linkedin"></i></a>
+            </div>
+            <!-- <div class="image">
+                <img draggable="false" class="tilt" src="./src/images/dev.png" alt="">
+            </div> -->
+        </div>
+    </section>
+
+    <!-- About section starts here -->
+
+      <section class="about" id="about">
+        <div class="max__width">
+            <h2 class="title">About Me</h2>
+            <div class="about__content">
+                <div class="col left">
+                    <img src="./src/images/profile.jpeg" alt="My_Image" class="fade-in-image">
+                </div>
+                <div class="col right">
+                    <div class="text">I'm Hussein Alawieh and <span class="typing__2"></span></div>
+                    <p>
+                        Hi! I am an Full Stack Developer at BIMPOS.
+                        I'm a highly motivated person with an ability to learn and adapt quickly to new projects and environments, very enthusiastic to learn about technologies and enjoy interactive discussions. 
+                        I'm also really good at multi-tasking and time management.
+                    </p>
+                    <a  href="./src/HusseinAlawiehCV.pdf" download>Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section goes here -->
+    <section class="skills" id="skills">
+        <div class="max__width">
+            <h2 class="title">My Skills</h2>
+            <div class="skills__content">
+                <!-- Left part of skills starts here. -->
+                <div class="col left">
+                    <h2>Frameworks and Databases</h2>
+                    <!-- Android skills. -->
+                    <div class="bars">
+                        <div class="info">
+                        <span>Android SDK</span>
+                        <span class="percentage">60%</span>
+                        </div>
+                        <div class="line android"></div>
+                    </div>
+                    <!-- Android skills. -->
+                    <div class="bars">
+                        <div class="info">
+                        <span>Angular</span>
+                        <span class="percentage">50%</span>
+                        </div>
+                        <div class="line angular"></div>
+                    </div>
+                    <!-- vue -->
+                    <div class="bars">
+                        <div class="info">
+                        <span>Vue</span>
+                        <span class="percentage">80%</span>
+                        </div>
+                        <div class="line vue"></div>
+                    </div>
+                    <!-- laravel -->
+                    <div class="bars">
+                        <div class="info">
+                        <span>Laravel</span>
+                        <span class="percentage">90%</span>
+                        </div>
+                        <div class="line laravel"></div>
+                    </div>
+                    <!-- mysql -->
+                    <div class="bars">
+                        <div class="info">
+                        <span>MySQL</span>
+                        <span class="percentage">90%</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>
+                    <!-- firebase -->
+                    <div class="bars">
+                        <div class="info">
+                        <span>Firebase</span>
+                        <span class="percentage">80%</span>
+                        </div>
+                        <div class="line firebase"></div>
+                    </div>
+                </div>
+                <!-- Right part of skills starts here. -->
+                <div class="col right">
+                    <h2>Programming Languages</h2>
+                    <!-- HTML skills. -->
+                    <div class="bars">
+                        <div class="info">
+                          <span>HTML</span>
+                          <span class="percentage">90%</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <!-- CSS skills. -->
+                    <div class="bars">
+                        <div class="info">
+                          <span>CSS</span>
+                          <span class="percentage">60%</span>
+                        </div>
+                        <div class="line css"></div>
+                    </div>
+                    <!-- JS skills. -->
+                    <div class="bars">
+                        <div class="info">
+                            <span>JS</span>
+                            <span class="percentage">70%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <!-- PHP skills. -->
+                    <div class="bars">
+                        <div class="info">
+                            <span>PHP</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="line php"></div>
+                    </div>
+                    <!-- PHP skills. -->
+                    <div class="bars">
+                        <div class="info">
+                            <span>JAVA</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="line java"></div>
+                    </div>
+                    <!-- C++ skills. -->
+                    <div class="bars">
+                        <div class="info">
+                            <span>C++</span>
+                            <span class="percentage">50%</span>
+                        </div>
+                        <div class="line cpp"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact section starts here. -->
+     <section class="contact" id="contact">
+        <div class="max__width">
+            <h2 class="title">Contact Me</h2>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Lorem ipsumsit amet consecte <br> tur adipisicing elit. <br> Accusantium, ratione.</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+961-76171058</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>halawieh1@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form id="contactForm">
+                        <h2>Send Message</h2>
+                        <div class="inputBox">
+                            <input type="text" name="full_name" required>
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" required>
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="message" required></textarea>
+                            <span>Type Your Message...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
+    <script src="./src/script.js"></script>
+    <script src="./src/sendemail.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,681 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.max__width {
+width: 100%;  
+  padding: 0 80px;
+    margin: auto;
+}
+
+/* Styling similar elements */
+section {
+    padding: 100px 0;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: black;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+section .title::after {
+    content: "";
+    position: absolute;
+    font-size: 20px;
+    color: crimson;
+    bottom: -8px;
+    left: 50%;
+    padding: 0 5px;
+    background: white;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+
+
+/* Styling navigation bar  */
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px 0px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.nav.sticky {
+    padding: 15px 0px;
+    background: crimson;
+    transition: all 0.3s ease;
+}
+
+
+.nav .max__width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav .menu li a {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.nav .menu li a:hover {
+    font-size: 30px;
+    color: #dc143c;
+}
+
+.nav.sticky .menu li a:hover {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.nav .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.nav .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+
+.nav.sticky .logo a span {
+    color: rgb(0, 0, 0);
+}
+
+/* Menu botton Styling */
+.menu-btn {
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Styling home */
+.home {
+    display: flex;
+    background: url(./images/backgound.png) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+
+.home .max__width {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home .home__content .text-1 {
+    font-size: 27px;
+}
+
+.home .home__content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home__content .text-3 {
+    font-size: 40px;
+    margin: 5px 0px;
+}
+.home .home__content .text-3 span {
+    font-weight: 500;
+    color: crimson;
+}
+
+.home .home__content a {
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home .home__content a:hover {
+    background: none;
+    color: crimson;
+}
+
+
+  .image img {
+    width: 60%;
+    margin-left: 15rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .image img:hover {
+    transform: scale(1.2);
+  }
+
+
+@media screen and (max-width: 947px) {
+    /* Global */
+    .max__width {
+        max-width: 930px;
+        padding: 0 40px;
+    }
+
+    /* Menu botton Styling */
+    .menu-btn {
+        display: block;
+        z-index: 9999;
+    }
+
+    .menu-btn i.active::before {
+        content: "\f00d";
+    }
+    
+    /* Styling navigation bar  */
+
+    .nav .menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -100%;
+        left: 0;
+        transition: all 0.3s ease;
+        background-color: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .nav .menu.active {
+        top: 0;
+    }
+
+    .nav .menu li {
+        display: block;
+    }
+    
+    .nav .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: crimson;
+
+    }
+}
+
+/* Styling About section.  */
+
+.about
+{
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.fade-in-image {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in, transform 0.8s ease-in;
+  }
+  .fade-in-image.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .fade-in-image.hide {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+.about .about__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .title::after {
+    content: "who am i";
+}
+  
+  .col {
+    flex-basis: 50%;
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+  
+  @media (max-width: 888px) {
+    .col {
+      flex-basis: 100%;
+    }
+    .col img {
+        max-width: 100%; /* Ensure the image doesn't exceed the column width */
+        display: block; /* Remove any default inline behavior */
+        margin: 0 auto; /* Center the image horizontally */
+      }
+  }
+  
+
+.about .about__content .left {
+    width: 45%;
+}
+
+.about .about__content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about .about__content .right {
+    width: 55%;
+}
+
+.about .about__content .right .text {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about__content .right .text span {
+    color: crimson;
+}
+
+.about .about__content .right p {
+     text-align: justify;
+}
+
+.about .about__content .right a {
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about__content .right a:hover {
+    background: none;
+    color: crimson;
+}
+
+/* skills stylings */
+
+.skills
+{
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.skills .skills__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills {
+    background: url('./images/backgound.png');
+
+}
+
+.skills .title {
+    color: white;
+}
+
+.skills .title::before {
+    background: white;
+    z-index: 1;
+}
+
+.skills .title::after {
+    content: "what i know";
+    color: crimson;
+    background: black;
+    z-index: 2;
+}
+
+.skills .skills__content .col {
+    width: calc(50% - 30px);
+}
+
+.skills .skills__content .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills__content .bars .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.skills .skills__content .bars .info span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skills .skills__content .bars .line {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: lightgrey;
+}
+
+.skills .skills__content .bars .line::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skills .skills__content  h2{
+    color: white;
+    text-align: center;
+}
+
+
+.skills .skills__content .right .bars .html::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .right .bars .html.filled::before {
+    width: 90%;
+}
+
+.skills .skills__content .right .bars .css::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .right .bars .css.filled::before {
+    width: 60%;
+}
+
+.skills .skills__content .right .bars .js::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .right .bars .js.filled::before {
+    width: 70%;
+}
+
+.skills .skills__content .right .bars .php::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .right .bars .php.filled::before {
+    width: 80%;
+}
+
+.skills .skills__content .right .bars .java::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .right .bars .java.filled::before {
+    width: 80%;
+}
+
+.skills .skills__content .right .bars .cpp::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .right .bars .cpp.filled::before {
+    width: 50%;
+}
+
+.skills .skills__content .left .bars .android::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .left .bars .android.filled::before {
+    width: 60%;
+}
+
+.skills .skills__content .left .bars .angular::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .left .bars .angular.filled::before {
+    width: 50%;
+}
+
+.skills .skills__content .left .bars .vue::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .left .bars .vue.filled::before {
+    width: 80%;
+}
+
+.skills .skills__content .left .bars .laravel::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .left .bars .laravel.filled::before {
+    width: 90%;
+}
+
+.skills .skills__content .left .bars .mysql::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .left .bars .mysql.filled::before {
+    width: 90%;
+}
+
+.skills .skills__content .left .bars .firebase::before {
+    width: 0%;
+    transition: width 1s ease;
+  }
+  
+.skills .skills__content .left .bars .firebase.filled::before {
+    width: 80%;
+}
+
+/* Styling same features */
+.contact{
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.contact .contact__content
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .title::after {
+    content: "get in touch";
+}
+
+.contact .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact .container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.contact .container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contact .container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contact .container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000000;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contact .container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #dc143c;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border: 2px solid #dc143c;
+    padding: 20px;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]:hover {
+    background: none;
+    color: crimson;
+  }
+.contactForm .inputBox input[type="submit"] {
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+  }
+
+@media (max-width: 991px) {
+
+    .contact{
+        padding: 50px;
+    }
+    .contact .container{
+        flex-direction: column;
+    }
+    .contact .container .contactInfo{
+        margin-bottom: 40px
+    }
+    .contact .container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+}
+
